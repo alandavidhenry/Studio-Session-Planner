@@ -1,1 +1,44 @@
-<p>dashboard works!</p>
+<div class="container">
+
+  <div class="row mt-5 mb-5">
+
+    <div class="col-md-4">
+
+      <div class="card">
+        <div class="card-body text-center mt-4" routerLink="/new-session">
+          <fa-icon [icon]="faFolderPlus" size="3x"></fa-icon>
+          <h3 class="card-title mt-4">New session</h3>
+          <h6 class="card-subtitle mt-3 mb-2 text-body-secondary">Start a new session</h6>
+        </div>
+      </div>
+   
+    </div>
+
+    <div class="col-md-4">
+
+      <div class="card">
+        <div class="card-body text-center mt-4" routerLink="/sessions">
+          <fa-icon [icon]="faFolderOpen" size="3x"></fa-icon>
+          <h3 class="card-title mt-4">Open session</h3>
+          <h6 class="card-subtitle mt-3 mb-2 text-body-secondary">Open an existing session</h6>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+      <div class="card">
+        <div class="card-body text-center mt-4" routerLink="/equipment">
+          <fa-icon [icon]="faMicrophone" size="3x"></fa-icon>
+          <h3 class="card-title mt-4">Equipment</h3>
+          <h6 class="card-subtitle mt-3 mb-2 text-body-secondary">View and edit equipment</h6>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+

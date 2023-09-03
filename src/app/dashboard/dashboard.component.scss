@@ -1,0 +1,17 @@
+.card {
+  width: 14rem;
+  min-height: 14rem;
+  cursor: pointer;
+} 
+
+@media (max-width: 768px) {
+  .card {
+  width: 32rem;
+  } 
+}
+
+@media (max-width: 576px) {
+  .card {
+  width: 28rem;
+  } 
+}
