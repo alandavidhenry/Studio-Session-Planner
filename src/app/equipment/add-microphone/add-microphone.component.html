@@ -1,0 +1,40 @@
+<main class="form-signin w-100 m-auto">
+  <form>
+    <h1 class="h3 mb-3 fw-normal">Add a new microphone</h1>
+    <p>Please enter your details below to create a new microphone</p>
+
+    <div class="form-floating">
+      <input type="text" class="form-control top" placeholder="Make" name="make" [(ngModel)]="microphone.make">
+      <label for="make">Make</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control middle" placeholder="Model" name="model" [(ngModel)]="microphone.model">
+      <label for="model">Model</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control middle" placeholder="Type" name="type" [(ngModel)]="microphone.type">
+      <label for="type">Type</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control middle" placeholder="Polar pattern(s)" name="polar" [(ngModel)]="microphone.polarPatterns">
+      <label for="polar">Polar pattern(s)</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control middle" placeholder="Primary use" name="use" [(ngModel)]="microphone.primaryUse">
+      <label for="use">Primary use</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control middle" placeholder="Frequency Response" name="freq" [(ngModel)]="microphone.frequencyResponse">
+      <label for="freq">Frequency Response</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control middle" placeholder="Preattenuation Pad" name="pad" [(ngModel)]="microphone.preattenuationPad">
+      <label for="pad">Preattenuation Pad</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control bottom" placeholder="Bass cut filter" name="bass" [(ngModel)]="microphone.bassCutFilter">
+      <label for="bass">Bass cut filter</label>
+    </div>
+    <button class="btn btn-primary w-100 py-2" type="submit" (click)="saveMicrophone()">Submit</button>
+  </form>
+</main>

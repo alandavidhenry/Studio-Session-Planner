@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6 mt-2 mb-4">
+      <button class="btn btn-info me-3" routerLink="/equipment/add-microphone">Add new microphone</button>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="card">
+
+        <div class="card-header">
+          <h3 class="card-title mt-2 mb-3">Microphones</h3>
+        </div>
+
+        <div class="card-body">
+        
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-start"
+                *ngFor="let microphone of microphones; let i = index"
+                [class.active]="i == currentIndex"
+                (click)="setActiveMicrophone(microphone, i)"
+                >
+              <div class="ms-2 me-auto inline">
+                <div><strong>{{ microphone.make }}</strong> {{ microphone.model }}</div>
+                <small class="text-body-secondary">{{ microphone.type }}</small>
+              </div>
+              <span class="badge bg-primary rounded-pill">{{ microphone.quantity }}</span>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div *ngIf="currentMicrophone">
+        <app-microphone-details
+          (refreshList)="refreshList()"
+          [microphone]="currentMicrophone"></app-microphone-details>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+

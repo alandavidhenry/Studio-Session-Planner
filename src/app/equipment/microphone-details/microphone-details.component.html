@@ -1,64 +1,60 @@
 <div class="container">
 
-  <div class="row my-4">
+  <div class="card">
 
-    <div class="col-md-6">
-      <h2 class=" d-inline-block">AKG 414 XLS</h2><span class="badge bg-primary rounded-pill align-top ms-2">2</span>
+    <div class="card-header">
+
+      <div class="row my-2">
+        <div class="col-md-8">
+          <h3 class=" d-inline-block">{{ currentMicrophone.make }} {{ currentMicrophone.model }}</h3><span class="badge bg-primary rounded-pill align-top ms-2">{{ currentMicrophone.quantity }}</span>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-warning btn-sm" routerLink="/equipment/edit-microphone">Edit this mic</button>
+        </div>
+      </div>
+
     </div>
 
-    <div class="col-md-6">
-      <button class="btn btn-info me-3">Add new microphone</button>
-      <button class="btn btn-warning">Edit this microphone</button>
-    </div>
-
-  </div>
-  
-  <div class="row">
-    <div class="col-md-6">
-
+    <div class="card-body">
       <img src="../../../assets/AKG_c414_xls.webp" alt="" class="img-fluid my-3 mic">
 
       <table class="table">
         <tbody>
           <tr>
             <td>Type</td>
-            <td>Condenser</td>
+            <td>{{ currentMicrophone.type }}</td>
           </tr>
           <tr>
             <td>Polar pattern(s)</td>
-            <td>Cardioid, Figure of eight, Hypercardioid, Omnidirectional, Wide Cardioid</td>
+            <td>{{ currentMicrophone.polarPatterns }}</td>
           </tr>
           <tr>
             <td>Primary use</td>
-            <td>Instrumental, Vocal</td>
+            <td>{{ currentMicrophone.primaryUse }}</td>
           </tr>
           <tr>
-            <td>Frequency Response</td>
-            <td>20 - 20000 Hz</td>
+            <td>Frequency response</td>
+            <td>{{ currentMicrophone.frequencyResponse }}</td>
           </tr>
           <tr>
             <td>Preattenuation Pad</td>
-            <td>-6, -12, -18 dB</td>
+            <td>{{ currentMicrophone.preattenuationPad }}</td>
           </tr>
           <tr>
             <td>Bass cut filter</td>
-            <td>160 Hz, 80 Hz, 40 Hz</td>
+            <td>{{ currentMicrophone.bassCutFilter }}</td>
           </tr>
         </tbody>
       </table>
 
-    </div>
-
-    <div class="col-md-5 mx-2">
       <div class="row">
         <img src="../../../assets/AKG414XLS_freq.png" alt="" class="img-fluid my-3 mic-graph my-5">
       </div>
       <div class="row">
         <img src="../../../assets/AKG414XLS_polar.png" alt="" class="img-fluid my-3 mic-graph">
       </div>
-    </div>
 
-    
+    </div>
 
   </div>
 

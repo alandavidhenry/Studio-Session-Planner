@@ -5,6 +5,8 @@ import { NewUserComponent } from './user/new-user/new-user.component';
 import { UserProfileComponent } from './user/user-profile/user-profile.component';
 import { LoginComponent } from './user/login/login.component';
 import { EquipmentComponent } from './equipment/equipment.component';
+import { MicrophoneListComponent } from './equipment/microphone-list/microphone-list.component';
+import { AddMicrophoneComponent } from './equipment/add-microphone/add-microphone.component';
 import { MicrophoneDetailsComponent } from './equipment/microphone-details/microphone-details.component';
 import { EditMicrophoneComponent } from './equipment/edit-microphone/edit-microphone.component';
 
@@ -12,6 +14,8 @@ const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'equipment', component: EquipmentComponent },
+  { path: 'equipment/microphone-list', component: MicrophoneListComponent },
+  { path: 'equipment/add-microphone', component: AddMicrophoneComponent },
   { path: 'equipment/microphone-details', component: MicrophoneDetailsComponent },
   { path: 'equipment/edit-microphone', component: EditMicrophoneComponent },
   { path: 'user/user-profile', component: UserProfileComponent },
